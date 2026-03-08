@@ -31,7 +31,8 @@ function BalanceScaleDemo() {
 
     const difference = leftWeight - rightWeight;
     const isBalanced = difference === 0;
-    const tiltAngle = Math.max(-15, Math.min(15, difference * 1.5));
+    // Positive difference = left heavier = left goes DOWN = negative rotation angle
+    const tiltAngle = Math.max(-15, Math.min(15, -difference * 1.5));
 
     return (
         <div className="bg-white rounded-xl p-6 border border-slate-200">
@@ -117,7 +118,8 @@ function EquationBalanceDemo() {
     const leftSide = xValue + 4;
     const rightSide = 16;
     const isBalanced = leftSide === rightSide;
-    const tiltAngle = Math.max(-15, Math.min(15, (leftSide - rightSide) * 1.5));
+    // Positive difference = left heavier = left goes DOWN = negative rotation angle
+    const tiltAngle = Math.max(-15, Math.min(15, -(leftSide - rightSide) * 1.5));
 
     return (
         <div className="bg-white rounded-xl p-6 border border-slate-200">
