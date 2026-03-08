@@ -1,6 +1,21 @@
+/**
+ * Introduction to Algebra
+ * =======================
+ *
+ * A complete interactive course for Grade 7 students (ages 12-13)
+ * transitioning from primary to secondary school.
+ *
+ * This course covers:
+ * 1. What is Algebra? - The mystery number concept
+ * 2. Shape Puzzles - Algebra in disguise
+ * 3. The Balance Scale - Understanding equations visually
+ * 4. Algebraic Terminology - Variables, coefficients, constants
+ * 5. Grouping Like Terms - Simplifying expressions
+ * 6. Solving Simple Equations - Putting it all together
+ * 7. Practice and Review - Consolidation
+ */
+
 import { type ReactElement } from "react";
-// import { Block } from "@/components/templates";
-// import { StackLayout, SplitLayout, GridLayout, ScrollytellingLayout, ScrollStep, ScrollVisual } from "@/components/layouts";
 
 // Initialize variables and their colors from this file's variable definitions
 import { useVariableStore, initializeVariableColors } from "@/stores";
@@ -8,82 +23,42 @@ import { getDefaultValues, variableDefinitions } from "./variables";
 useVariableStore.getState().initialize(getDefaultValues());
 initializeVariableColors(variableDefinitions);
 
-/**
- * ------------------------------------------------------------------
- * BLOCK CONFIGURATION
- * ------------------------------------------------------------------
- * This file is the entry point for your lesson content.
- * 
- * INSTRUCTIONS:
- * 1. Create your content using <Block> components.
- * 2. Use Layout components to organize your blocks.
- * 3. Add your blocks to the `blocks` array below.
- * 
- * ------------------------------------------------------------------
- * CROSS-BLOCK VARIABLES
- * ------------------------------------------------------------------
- * Variables can be shared across blocks using the global store.
- * 
- * DEFINE VARIABLES: src/data/variables.ts (use only variables.ts in this file; same structure as exampleBlocks + exampleVariables)
- * 
- * USAGE IN BLOCKS:
- * 
- * // Reading a value (auto-updates when changed):
- * import { useVar } from '@/stores';
- * const amplitude = useVar('amplitude', 1);
- * 
- * // Setting a value:
- * import { useSetVar } from '@/stores';
- * const setVar = useSetVar();
- * setVar('amplitude', 2.5);
- * 
- * // InlineScrubbleNumber (from variables.ts): getVariableInfo(name) + numberPropsFromDefinition(...)
- * <InlineScrubbleNumber varName="amplitude" {...numberPropsFromDefinition(getVariableInfo('amplitude'))} />
- * 
- * ------------------------------------------------------------------
- * AVAILABLE LAYOUTS
- * ------------------------------------------------------------------
- * 
- * 1. StackLayout
- *    - Best for: Title headers, introductory text, broad visualizations.
- *    - Usage:
- *      <StackLayout maxWidth="xl">
- *          <Block id="intro">...</Block>
- *      </StackLayout>
- * 
- * 2. SplitLayout
- *    - Best for: Side-by-side content (e.g., Text + Visualization).
- *    - Usage:
- *      <SplitLayout ratio="1:1" gap="lg">
- *          <Block id="left">...</Block>
- *          <Block id="right">...</Block>
- *      </SplitLayout>
- * 
- * 3. GridLayout
- *    - Best for: Multiple equal-sized items (cards, galleries).
- *    - Usage:
- *      <GridLayout columns={3} gap="md">
- *          <Block id="item-1">...</Block>
- *          <Block id="item-2">...</Block>
- *          <Block id="item-3">...</Block>
- *      </GridLayout>
- * 
- * 4. ScrollytellingLayout
- *    - Best for: Narrative steps with a reactive sticky visualization.
- *    - Usage:
- *      <ScrollytellingLayout varName="scrollStep" visualPosition="right">
- *          <ScrollStep><Block id="step-0">...</Block></ScrollStep>
- *          <ScrollStep><Block id="step-1">...</Block></ScrollStep>
- *          <ScrollVisual><Block id="viz">...</Block></ScrollVisual>
- *      </ScrollytellingLayout>
- * 
- * EXAMPLES:
- * See `src/data/exampleBlocks.tsx` for comprehensive examples.
- * 
- * NOTE: If you are seeing examples in the browser instead of this content,
- * check your .env file and set VITE_SHOW_EXAMPLES=false.
- */
+// Import all section blocks
+import {
+    section1IntroductionBlocks,
+    section2ShapePuzzlesBlocks,
+    section3BalanceScaleBlocks,
+    section4TerminologyBlocks,
+    section5LikeTermsBlocks,
+    section6SolvingEquationsBlocks,
+    section7ReviewBlocks,
+} from "./sections";
 
+/**
+ * All lesson blocks combined into a single flat array.
+ * Each section flows naturally into the next.
+ */
 export const blocks: ReactElement[] = [
-    // Start adding your blocks here!
+    // Section 1: What is Algebra?
+    ...section1IntroductionBlocks,
+
+    // Section 2: Shape Puzzles - Algebra in Disguise
+    ...section2ShapePuzzlesBlocks,
+
+    // Section 3: The Balance Scale - Understanding Equations
+    ...section3BalanceScaleBlocks,
+
+    // Section 4: The Language of Algebra - Terminology and Conventions
+    ...section4TerminologyBlocks,
+
+    // Section 5: Grouping Like Terms
+    ...section5LikeTermsBlocks,
+
+    // Section 6: Solving Simple Equations
+    ...section6SolvingEquationsBlocks,
+
+    // Section 7: Practice and Review
+    ...section7ReviewBlocks,
 ];
+
+export default blocks;

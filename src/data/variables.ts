@@ -1,16 +1,9 @@
 /**
  * Variables Configuration
  * =======================
- * 
- * CENTRAL PLACE TO DEFINE ALL SHARED VARIABLES
- * 
- * This file defines all variables that can be shared across sections.
- * AI agents should read this file to understand what variables are available.
- * 
- * USAGE:
- * 1. Define variables here with their default values and metadata
- * 2. Use them in any section with: const x = useVar('variableName', defaultValue)
- * 3. Update them with: setVar('variableName', newValue)
+ *
+ * Introduction to Algebra Course Variables
+ * For Grade 7 students (ages 12-13) transitioning from primary to secondary school
  */
 
 import { type VarValue } from '@/stores';
@@ -53,108 +46,377 @@ export interface VariableDefinition {
 
 /**
  * =====================================================
- * 🎯 DEFINE YOUR VARIABLES HERE
+ * 🎯 INTRODUCTION TO ALGEBRA - VARIABLE DEFINITIONS
  * =====================================================
- * 
- * SUPPORTED TYPES:
- * 
- * 1. NUMBER (slider):
- *    { defaultValue: 5, type: 'number', min: 0, max: 10, step: 1 }
- * 
- * 2. TEXT (free text):
- *    { defaultValue: 'Hello', type: 'text', placeholder: 'Enter text...' }
- * 
- * 3. SELECT (dropdown):
- *    { defaultValue: 'sine', type: 'select', options: ['sine', 'cosine', 'tangent'] }
- * 
- * 4. BOOLEAN (toggle):
- *    { defaultValue: true, type: 'boolean' }
- * 
- * 5. ARRAY (list of numbers):
- *    { defaultValue: [1, 2, 3], type: 'array' }
- * 
- * 6. OBJECT (complex data):
- *    { defaultValue: { x: 5, y: 10 }, type: 'object', schema: '{ x: number, y: number }' }
  */
 export const variableDefinitions: Record<string, VariableDefinition> = {
     // ========================================
-    // ADD YOUR VARIABLES HERE
+    // SECTION 1: WHAT IS ALGEBRA?
     // ========================================
-
-    // Uncomment and modify these examples for your lesson:
-
-    /*
-    // ─────────────────────────────────────────
-    // NUMBER - Use with sliders
-    // ─────────────────────────────────────────
-    myValue: {
+    mysteryNumber: {
         defaultValue: 5,
         type: 'number',
-        label: 'My Value',
-        description: 'A number that controls something',
-        unit: 'm',           // optional unit display
-        min: 0,
-        max: 10,
-        step: 0.5,
+        label: 'Mystery Number',
+        description: 'The unknown number in the mystery number demo',
+        min: 1,
+        max: 20,
+        step: 1,
+        color: '#8b5cf6',
     },
-
-    // ─────────────────────────────────────────
-    // TEXT - Free text input
-    // ─────────────────────────────────────────
-    lessonTitle: {
-        defaultValue: 'My Lesson',
+    mysteryResult: {
+        defaultValue: 7,
+        type: 'number',
+        label: 'Mystery Result',
+        description: 'The result shown after adding 2',
+        min: 3,
+        max: 22,
+        step: 1,
+        color: '#3b82f6',
+    },
+    answer_intro_mystery: {
+        defaultValue: '',
         type: 'text',
-        label: 'Lesson Title',
-        description: 'The title of your lesson',
-        placeholder: 'Enter a title...',
+        label: 'Mystery Number Answer',
+        description: 'Student answer for the first mystery number question',
+        placeholder: '???',
+        correctAnswer: '5',
+        color: '#8b5cf6',
     },
 
-    // ─────────────────────────────────────────
-    // SELECT - Dropdown with options
-    // ─────────────────────────────────────────
-    difficulty: {
-        defaultValue: 'medium',
+    // ========================================
+    // SECTION 2: SHAPE PUZZLES
+    // ========================================
+    circleValue: {
+        defaultValue: 4,
+        type: 'number',
+        label: 'Circle Value',
+        description: 'The value of each circle in shape puzzles',
+        min: 1,
+        max: 10,
+        step: 1,
+        color: '#3b82f6',
+    },
+    triangleValue: {
+        defaultValue: 2,
+        type: 'number',
+        label: 'Triangle Value',
+        description: 'The value of each triangle in shape puzzles',
+        min: 1,
+        max: 10,
+        step: 1,
+        color: '#ef4444',
+    },
+    squareValue: {
+        defaultValue: 3,
+        type: 'number',
+        label: 'Square Value',
+        description: 'The value of each square in shape puzzles',
+        min: 1,
+        max: 10,
+        step: 1,
+        color: '#22c55e',
+    },
+    answer_shapes_triangle: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Triangle Answer',
+        description: 'Student answer for finding the triangle value',
+        placeholder: '???',
+        correctAnswer: '2',
+        color: '#ef4444',
+    },
+    answer_shapes_square: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Square Answer',
+        description: 'Student answer for finding the square value',
+        placeholder: '???',
+        correctAnswer: '5',
+        color: '#22c55e',
+    },
+
+    // ========================================
+    // SECTION 3: BALANCE SCALE
+    // ========================================
+    scaleLeftWeight: {
+        defaultValue: 10,
+        type: 'number',
+        label: 'Left Side Weight',
+        description: 'Total weight on the left side of the scale',
+        min: 0,
+        max: 50,
+        step: 1,
+        color: '#6366f1',
+    },
+    scaleRightWeight: {
+        defaultValue: 10,
+        type: 'number',
+        label: 'Right Side Weight',
+        description: 'Total weight on the right side of the scale',
+        min: 0,
+        max: 50,
+        step: 1,
+        color: '#f97316',
+    },
+    scaleXValue: {
+        defaultValue: 3,
+        type: 'number',
+        label: 'x Value',
+        description: 'The value of x in the balance equation',
+        min: 1,
+        max: 10,
+        step: 1,
+        color: '#8b5cf6',
+    },
+    answer_balance_x: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Balance x Answer',
+        description: 'Student answer for finding x in the balance equation',
+        placeholder: '???',
+        correctAnswer: '4',
+        color: '#8b5cf6',
+    },
+
+    // ========================================
+    // SECTION 4: TERMINOLOGY AND CONVENTIONS
+    // ========================================
+    coefficientValue: {
+        defaultValue: 3,
+        type: 'number',
+        label: 'Coefficient',
+        description: 'The coefficient in algebraic terms',
+        min: 1,
+        max: 10,
+        step: 1,
+        color: '#ef4444',
+    },
+    variableMultiplier: {
+        defaultValue: 2,
+        type: 'number',
+        label: 'Variable Multiplier',
+        description: 'A multiplier for showing algebraic expressions',
+        min: 1,
+        max: 10,
+        step: 1,
+        color: '#3b82f6',
+    },
+    answer_term_coefficient: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Coefficient Answer',
+        description: 'Student identifies the coefficient in 5x',
+        placeholder: '???',
+        correctAnswer: '5',
+        color: '#ef4444',
+    },
+    answer_term_variable: {
+        defaultValue: '',
         type: 'select',
-        label: 'Difficulty',
-        description: 'The difficulty level of the lesson',
-        options: ['easy', 'medium', 'hard', 'expert'],
+        label: 'Variable Answer',
+        description: 'Student identifies the variable in 5x',
+        placeholder: '???',
+        correctAnswer: 'x',
+        options: ['5', 'x', '5x', 'none'],
+        color: '#8b5cf6',
+    },
+    answer_convention_correct: {
+        defaultValue: '',
+        type: 'select',
+        label: 'Convention Answer',
+        description: 'Student picks the correct way to write 3 times y',
+        placeholder: '???',
+        correctAnswer: '3y',
+        options: ['3 × y', 'y3', '3y', 'y × 3'],
+        color: '#22c55e',
     },
 
-    // ─────────────────────────────────────────
-    // BOOLEAN - Toggle switch
-    // ─────────────────────────────────────────
-    showHints: {
-        defaultValue: true,
-        type: 'boolean',
-        label: 'Show Hints',
-        description: 'Toggle to show or hide hints',
+    // ========================================
+    // SECTION 5: GROUPING LIKE TERMS
+    // ========================================
+    likeTermsA: {
+        defaultValue: 3,
+        type: 'number',
+        label: 'First Coefficient',
+        description: 'First coefficient in like terms addition',
+        min: 1,
+        max: 10,
+        step: 1,
+        color: '#3b82f6',
+    },
+    likeTermsB: {
+        defaultValue: 2,
+        type: 'number',
+        label: 'Second Coefficient',
+        description: 'Second coefficient in like terms addition',
+        min: 1,
+        max: 10,
+        step: 1,
+        color: '#3b82f6',
+    },
+    answer_like_terms_simple: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Simple Like Terms Answer',
+        description: 'Student answer for 3x + 2x',
+        placeholder: '???',
+        correctAnswer: '5x',
+        color: '#3b82f6',
+        caseSensitive: false,
+    },
+    answer_like_terms_mixed: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Mixed Like Terms Answer',
+        description: 'Student answer for combining 4x + 3 + 2x + 5',
+        placeholder: '???',
+        correctAnswer: '6x + 8',
+        color: '#8b5cf6',
+        caseSensitive: false,
     },
 
-    // ─────────────────────────────────────────
-    // ARRAY - List of numbers
-    // ─────────────────────────────────────────
-    dataPoints: {
-        defaultValue: [1, 4, 9, 16, 25],
-        type: 'array',
-        label: 'Data Points',
-        description: 'Y-values for plotting a graph',
+    // ========================================
+    // SECTION 6: SOLVING EQUATIONS
+    // ========================================
+    equationCoeff: {
+        defaultValue: 2,
+        type: 'number',
+        label: 'Equation Coefficient',
+        description: 'The coefficient of x in the equation',
+        min: 1,
+        max: 10,
+        step: 1,
+        color: '#8b5cf6',
+    },
+    equationConstant: {
+        defaultValue: 4,
+        type: 'number',
+        label: 'Equation Constant',
+        description: 'The constant on the left side',
+        min: 1,
+        max: 15,
+        step: 1,
+        color: '#f97316',
+    },
+    equationResult: {
+        defaultValue: 10,
+        type: 'number',
+        label: 'Equation Result',
+        description: 'The value on the right side of the equation',
+        min: 5,
+        max: 30,
+        step: 1,
+        color: '#22c55e',
+    },
+    answer_solve_step1: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Solve Step 1 Answer',
+        description: 'Student finds what 2x equals after subtracting 4',
+        placeholder: '???',
+        correctAnswer: '6',
+        color: '#3b82f6',
+    },
+    answer_solve_final: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Solve Final Answer',
+        description: 'Student finds the value of x',
+        placeholder: '???',
+        correctAnswer: '3',
+        color: '#8b5cf6',
+    },
+    answer_practice_q1: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Practice Q1 Answer',
+        description: 'Student solves 3x + 5 = 14',
+        placeholder: '???',
+        correctAnswer: '3',
+        color: '#6366f1',
     },
 
-    // ─────────────────────────────────────────
-    // OBJECT - Complex structured data
-    // ─────────────────────────────────────────
-    graphSettings: {
-        defaultValue: { 
-            xMin: -10, 
-            xMax: 10, 
-            showGrid: true 
-        },
-        type: 'object',
-        label: 'Graph Settings',
-        description: 'Configuration for the graph display',
-        schema: '{ xMin: number, xMax: number, showGrid: boolean }',
+    // ========================================
+    // SECTION 7: PRACTICE AND REVIEW
+    // ========================================
+    answer_review_like_terms: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Review Like Terms Answer',
+        description: 'Review question: simplify 5y + 3 + 2y',
+        placeholder: '???',
+        correctAnswer: '7y + 3',
+        color: '#3b82f6',
+        caseSensitive: false,
     },
-    */
+    answer_review_equation: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Review Equation Answer',
+        description: 'Review question: solve 4x + 2 = 18',
+        placeholder: '???',
+        correctAnswer: '4',
+        color: '#8b5cf6',
+    },
+    answer_review_shapes: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Review Shapes Answer',
+        description: 'Review question: shape puzzle',
+        placeholder: '???',
+        correctAnswer: '6',
+        color: '#ef4444',
+    },
+
+    // ========================================
+    // SPOT COLORS FOR VISUAL COORDINATION
+    // ========================================
+    spotVariable: {
+        defaultValue: 'variable',
+        type: 'spotColor',
+        label: 'Variable Color',
+        description: 'Color for variable terms',
+        color: '#8b5cf6',
+    },
+    spotCoefficient: {
+        defaultValue: 'coefficient',
+        type: 'spotColor',
+        label: 'Coefficient Color',
+        description: 'Color for coefficients',
+        color: '#ef4444',
+    },
+    spotConstant: {
+        defaultValue: 'constant',
+        type: 'spotColor',
+        label: 'Constant Color',
+        description: 'Color for constant terms',
+        color: '#f97316',
+    },
+    spotOperator: {
+        defaultValue: 'operator',
+        type: 'spotColor',
+        label: 'Operator Color',
+        description: 'Color for operators',
+        color: '#22c55e',
+    },
+
+    // ========================================
+    // HIGHLIGHT GROUPS
+    // ========================================
+    termHighlight: {
+        defaultValue: '',
+        type: 'linkedHighlight',
+        label: 'Term Highlight',
+        description: 'Active highlight for algebraic terms',
+        color: '#8b5cf6',
+    },
+    balanceHighlight: {
+        defaultValue: '',
+        type: 'linkedHighlight',
+        label: 'Balance Highlight',
+        description: 'Active highlight for balance scale elements',
+        color: '#6366f1',
+    },
 };
 
 /**
@@ -191,7 +453,6 @@ export const getDefaultValues = (): Record<string, VarValue> => {
 
 /**
  * Get number props for InlineScrubbleNumber from a variable definition.
- * Use with getVariableInfo(name) in blocks.tsx, or getExampleVariableInfo(name) in exampleBlocks.tsx.
  */
 export function numberPropsFromDefinition(def: VariableDefinition | undefined): {
     defaultValue?: number;
@@ -211,12 +472,7 @@ export function numberPropsFromDefinition(def: VariableDefinition | undefined): 
 }
 
 /**
- * Get cloze input props for InlineClozeInput from a variable definition.
- * Use with getVariableInfo(name) in blocks.tsx, or getExampleVariableInfo(name) in exampleBlocks.tsx.
- */
-/**
  * Get cloze choice props for InlineClozeChoice from a variable definition.
- * Use with getVariableInfo(name) in blocks.tsx.
  */
 export function choicePropsFromDefinition(def: VariableDefinition | undefined): {
     placeholder?: string;
@@ -233,7 +489,6 @@ export function choicePropsFromDefinition(def: VariableDefinition | undefined): 
 
 /**
  * Get toggle props for InlineToggle from a variable definition.
- * Use with getVariableInfo(name) in blocks.tsx.
  */
 export function togglePropsFromDefinition(def: VariableDefinition | undefined): {
     color?: string;
@@ -263,15 +518,6 @@ export function clozePropsFromDefinition(def: VariableDefinition | undefined): {
 
 /**
  * Get spot-color props for InlineSpotColor from a variable definition.
- * Extracts the `color` field.
- *
- * @example
- * <InlineSpotColor
- *     varName="radius"
- *     {...spotColorPropsFromDefinition(getVariableInfo('radius'))}
- * >
- *     radius
- * </InlineSpotColor>
  */
 export function spotColorPropsFromDefinition(def: VariableDefinition | undefined): {
     color: string;
@@ -283,16 +529,6 @@ export function spotColorPropsFromDefinition(def: VariableDefinition | undefined
 
 /**
  * Get linked-highlight props for InlineLinkedHighlight from a variable definition.
- * Extracts the `color` and `bgColor` fields.
- *
- * @example
- * <InlineLinkedHighlight
- *     varName="activeHighlight"
- *     highlightId="radius"
- *     {...linkedHighlightPropsFromDefinition(getVariableInfo('activeHighlight'))}
- * >
- *     radius
- * </InlineLinkedHighlight>
  */
 export function linkedHighlightPropsFromDefinition(def: VariableDefinition | undefined): {
     color?: string;
@@ -306,17 +542,6 @@ export function linkedHighlightPropsFromDefinition(def: VariableDefinition | und
 
 /**
  * Build the `variables` prop for FormulaBlock from variable definitions.
- *
- * Takes an array of variable names and returns the config map expected by
- * `<FormulaBlock variables={...} />`.
- *
- * @example
- * import { scrubVarsFromDefinitions } from './variables';
- *
- * <FormulaBlock
- *     latex="\scrub{mass} \times \scrub{accel}"
- *     variables={scrubVarsFromDefinitions(['mass', 'accel'])}
- * />
  */
 export function scrubVarsFromDefinitions(
     varNames: string[],
