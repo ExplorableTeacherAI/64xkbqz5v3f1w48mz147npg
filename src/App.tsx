@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { HierarchyReporter } from "./components/HierarchyReporter";
 import { InlineFormulaEditorModal, ScrubbleNumberEditorModal, ClozeInputEditorModal, ClozeChoiceEditorModal, ToggleEditorModal, TooltipEditorModal, TriggerEditorModal, HyperlinkEditorModal, SpotColorEditorModal, LinkedHighlightEditorModal, FormulaBlockEditorModal } from "./components/utility";
+import { CelebrationOverlay } from "./data/sections/ProgressBar";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => {
           <LinkedHighlightEditorModal />
           <FormulaBlockEditorModal />
           <TooltipProvider>
+            <CelebrationOverlay />
             <HashRouter>
               <Routes>
                 <Route path="/" element={<Index />} />

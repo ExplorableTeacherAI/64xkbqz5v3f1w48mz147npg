@@ -417,6 +417,113 @@ export const variableDefinitions: Record<string, VariableDefinition> = {
         description: 'Active highlight for balance scale elements',
         color: '#6366f1',
     },
+
+    // ========================================
+    // PROGRESS & REWARDS SYSTEM
+    // ========================================
+    correctAnswers: {
+        defaultValue: 0,
+        type: 'number',
+        label: 'Correct Answers',
+        description: 'Number of correct answers the student has given',
+        min: 0,
+        max: 100,
+        step: 1,
+    },
+    currentStreak: {
+        defaultValue: 0,
+        type: 'number',
+        label: 'Current Streak',
+        description: 'Current streak of consecutive correct answers',
+        min: 0,
+        max: 50,
+        step: 1,
+    },
+    totalQuestions: {
+        defaultValue: 0,
+        type: 'number',
+        label: 'Total Questions',
+        description: 'Total number of questions attempted',
+        min: 0,
+        max: 100,
+        step: 1,
+    },
+
+    // ========================================
+    // SECTION 5B: VARIABLES WITH INDICES
+    // ========================================
+    answer_indices_ysquared: {
+        defaultValue: '',
+        type: 'select',
+        label: 'y squared vs y answer',
+        description: 'Student identifies if y² and y are like terms',
+        placeholder: '???',
+        correctAnswer: 'No',
+        options: ['Yes', 'No'],
+        color: '#8b5cf6',
+    },
+    answer_indices_simplify: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Simplify with indices',
+        description: 'Student simplifies 3x² + 2x + x²',
+        placeholder: '???',
+        correctAnswer: '4x² + 2x',
+        color: '#3b82f6',
+        caseSensitive: false,
+    },
+
+    // ========================================
+    // CHECKOUT QUIZ
+    // ========================================
+    quiz_q1: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Quiz Q1',
+        description: 'Quiz: simplify 6y + 2 + 3y',
+        placeholder: '???',
+        correctAnswer: '9y + 2',
+        color: '#6366f1',
+        caseSensitive: false,
+    },
+    quiz_q2: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Quiz Q2',
+        description: 'Quiz: solve 5x + 3 = 18',
+        placeholder: '???',
+        correctAnswer: '3',
+        color: '#6366f1',
+    },
+    quiz_q3: {
+        defaultValue: '',
+        type: 'select',
+        label: 'Quiz Q3',
+        description: 'Quiz: identify like terms',
+        placeholder: '???',
+        correctAnswer: '4x and 7x',
+        options: ['4x and 7y', '4x and 7x', '4x² and 7x', '4 and 7x'],
+        color: '#6366f1',
+    },
+    quiz_q4: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Quiz Q4',
+        description: 'Quiz: shape puzzle star value',
+        placeholder: '???',
+        correctAnswer: '5',
+        color: '#6366f1',
+    },
+    quiz_q5: {
+        defaultValue: '',
+        type: 'select',
+        label: 'Quiz Q5',
+        description: 'Quiz: coefficient identification',
+        placeholder: '???',
+        correctAnswer: '8',
+        options: ['x', '8', '8x', 'none'],
+        color: '#6366f1',
+    },
 };
 
 /**

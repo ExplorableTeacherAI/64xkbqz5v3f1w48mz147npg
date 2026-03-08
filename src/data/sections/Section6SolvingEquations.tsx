@@ -226,7 +226,7 @@ export const section6SolvingEquationsBlocks: ReactElement[] = [
     <StackLayout key="layout-solve-intro" maxWidth="xl">
         <Block id="solve-intro" padding="sm">
             <EditableParagraph id="para-solve-intro" blockId="solve-intro">
-                You've learned what algebra is, practiced with shape puzzles, understood the balance scale, learned the vocabulary, and mastered grouping like terms. Now it's time to put it all together and solve real equations! This is where the magic happens: you start with an equation containing an unknown, and you finish by knowing exactly what that unknown equals.
+                Now let's put it all together and solve real equations!
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -243,14 +243,14 @@ export const section6SolvingEquationsBlocks: ReactElement[] = [
     <StackLayout key="layout-solve-goal-text" maxWidth="xl">
         <Block id="solve-goal-text" padding="sm">
             <EditableParagraph id="para-solve-goal" blockId="solve-goal-text">
-                When we "solve" an equation, we want to find the value of the{" "}
+                Get the{" "}
                 <InlineTooltip
                     id="tooltip-isolate"
-                    tooltip="To isolate means to get something by itself. We want x alone on one side of the equation."
+                    tooltip="Get x alone on one side"
                 >
                     variable
                 </InlineTooltip>
-                . To do this, we need to get the variable by itself on one side of the equation. Everything else needs to move to the other side. Remember the golden rule: whatever we do to one side, we must do to the other to keep the balance.
+                {" "}by itself on one side. Whatever you do to one side, do to the other!
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -272,14 +272,14 @@ export const section6SolvingEquationsBlocks: ReactElement[] = [
     <StackLayout key="layout-solve-inverse-explain" maxWidth="xl">
         <Block id="solve-inverse-explain" padding="sm">
             <EditableParagraph id="para-solve-inverse-explain" blockId="solve-inverse-explain">
-                To undo an operation, we use its{" "}
+                Use{" "}
                 <InlineTooltip
                     id="tooltip-inverse"
-                    tooltip="Inverse means opposite. Addition and subtraction are inverses. Multiplication and division are inverses."
+                    tooltip="Opposite operations"
                 >
                     inverse
                 </InlineTooltip>
-                . If the equation has +4, we subtract 4. If it has ×2, we divide by 2. By using inverse operations on both sides, we "peel away" the numbers around x until x stands alone.
+                {" "}operations to undo: +4 → subtract 4, ×2 → divide by 2.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -312,7 +312,7 @@ export const section6SolvingEquationsBlocks: ReactElement[] = [
     <StackLayout key="layout-solve-sign-text" maxWidth="xl">
         <Block id="solve-sign-text" padding="sm">
             <EditableParagraph id="para-solve-sign" blockId="solve-sign-text">
-                You might have heard people say "when you move a number to the other side, the sign changes." This is a shortcut way of thinking about it, but here's what's really happening: when you subtract 4 from both sides, the +4 on the left cancels out (because +4 − 4 = 0), and the right side decreases by 4. It looks like the 4 "moved" and became −4, but really you subtracted 4 from everything. The balance scale helps you see why this works: you're keeping everything fair and balanced!
+                When you subtract 4 from both sides, the +4 on the left cancels out (+4 − 4 = 0), and the right decreases by 4. It looks like the number "moved and changed sign", but really you're just keeping the balance!
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -396,7 +396,7 @@ export const section6SolvingEquationsBlocks: ReactElement[] = [
     <StackLayout key="layout-solve-transition" maxWidth="xl">
         <Block id="solve-transition" padding="sm">
             <EditableParagraph id="para-solve-transition" blockId="solve-transition">
-                Congratulations! You now have all the fundamental skills of algebra. In the final section, we'll review everything with some mixed practice questions to make sure these concepts are solid in your mind.
+                Great work! Next up: a final review and quiz to test your skills.
             </EditableParagraph>
         </Block>
     </StackLayout>,

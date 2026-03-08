@@ -236,7 +236,7 @@ export const section4TerminologyBlocks: ReactElement[] = [
     <StackLayout key="layout-terms-intro" maxWidth="xl">
         <Block id="terms-intro" padding="sm">
             <EditableParagraph id="para-terms-intro" blockId="terms-intro">
-                Just like any subject, algebra has its own vocabulary. Learning these words will help you understand instructions, explain your thinking, and communicate with other mathematicians. Don't worry, there are only a few key terms to learn!
+                Algebra has its own vocabulary. Here are the key terms you need to know.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -256,14 +256,14 @@ export const section4TerminologyBlocks: ReactElement[] = [
                 A{" "}
                 <InlineTooltip
                     id="tooltip-variable-def"
-                    tooltip="From the Latin 'variare' meaning 'to change'. A variable can take different values in different situations."
+                    tooltip="From Latin 'variare' meaning 'to change'"
                 >
                     variable
                 </InlineTooltip>
-                {" "}is a letter that represents an unknown number. The most common variables are{" "}
+                {" "}is a letter representing an unknown:{" "}
                 <InlineSpotColor varName="spotVariable" {...spotColorPropsFromDefinition(getVariableInfo('spotVariable'))}>x</InlineSpotColor>,{" "}
-                <InlineSpotColor varName="spotVariable" {...spotColorPropsFromDefinition(getVariableInfo('spotVariable'))}>y</InlineSpotColor>, and{" "}
-                <InlineSpotColor varName="spotVariable" {...spotColorPropsFromDefinition(getVariableInfo('spotVariable'))}>z</InlineSpotColor>, but you can use any letter. Variables are called "variables" because the number they represent can vary from problem to problem.
+                <InlineSpotColor varName="spotVariable" {...spotColorPropsFromDefinition(getVariableInfo('spotVariable'))}>y</InlineSpotColor>,{" "}
+                <InlineSpotColor varName="spotVariable" {...spotColorPropsFromDefinition(getVariableInfo('spotVariable'))}>z</InlineSpotColor>, etc.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -280,16 +280,16 @@ export const section4TerminologyBlocks: ReactElement[] = [
     <StackLayout key="layout-terms-coefficient-text" maxWidth="xl">
         <Block id="terms-coefficient-text" padding="sm">
             <EditableParagraph id="para-terms-coefficient" blockId="terms-coefficient-text">
-                A{" "}
+                The{" "}
                 <InlineTooltip
                     id="tooltip-coefficient-def"
-                    tooltip="From Latin, meaning 'to work together with'. The coefficient tells you how many of the variable you have."
+                    tooltip="Tells you how many of the variable you have"
                 >
                     coefficient
                 </InlineTooltip>
-                {" "}is the number that multiplies a variable. In the term 5x, the{" "}
+                {" "}is the number in front. In 5x, the{" "}
                 <InlineSpotColor varName="spotCoefficient" {...spotColorPropsFromDefinition(getVariableInfo('spotCoefficient'))}>5</InlineSpotColor>
-                {" "}is the coefficient. It tells you how many x's you have. Think of it like this: 5x means "5 lots of x" or "x + x + x + x + x".
+                {" "}is the coefficient.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -323,13 +323,13 @@ export const section4TerminologyBlocks: ReactElement[] = [
                 A{" "}
                 <InlineTooltip
                     id="tooltip-constant-def"
-                    tooltip="'Constant' means unchanging. Unlike variables, constants always have the same value."
+                    tooltip="A number that never changes"
                 >
                     constant
                 </InlineTooltip>
-                {" "}is a number on its own, with no variable attached. In the expression 3x + 7, the{" "}
+                {" "}is a plain number with no variable. In 3x + 7, the{" "}
                 <InlineSpotColor varName="spotConstant" {...spotColorPropsFromDefinition(getVariableInfo('spotConstant'))}>7</InlineSpotColor>
-                {" "}is a constant. Constants don't change, they just stay as they are.
+                {" "}is a constant.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -349,11 +349,11 @@ export const section4TerminologyBlocks: ReactElement[] = [
                 A{" "}
                 <InlineTooltip
                     id="tooltip-term-def"
-                    tooltip="Terms are the building blocks of algebraic expressions. Each term is separated by + or − signs."
+                    tooltip="Building blocks separated by + or − signs"
                 >
                     term
                 </InlineTooltip>
-                {" "}is a single piece of an algebraic expression. It can be a variable (like x), a coefficient times a variable (like 3x), or a constant (like 7). Terms are separated by + or − signs.
+                {" "}is one piece of an expression: 3x, y, or 7 are all terms.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -377,7 +377,7 @@ export const section4TerminologyBlocks: ReactElement[] = [
     <StackLayout key="layout-terms-conventions-text" maxWidth="xl">
         <Block id="terms-conventions-text" padding="sm">
             <EditableParagraph id="para-terms-conventions" blockId="terms-conventions-text">
-                Mathematicians have agreed on certain ways to write algebra to keep things clear and consistent. The most important rule is: we don't write the multiplication sign between a number and a variable. Instead of writing 3 × y, we simply write 3y. This avoids confusion with the variable x!
+                We skip the × sign when writing algebra. Write 3y, not 3 × y (the × looks like x!).
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -393,7 +393,7 @@ export const section4TerminologyBlocks: ReactElement[] = [
     <StackLayout key="layout-terms-more-conventions" maxWidth="xl">
         <Block id="terms-more-conventions" padding="sm">
             <EditableParagraph id="para-terms-more-conventions" blockId="terms-more-conventions">
-                A few more conventions: when the coefficient is 1, we don't write it at all. Instead of 1x, we just write x. The 1 is understood to be there. Similarly, we put numbers before letters (write 3x, not x3), and when multiplying variables together, we use alphabetical order (write xy, not yx).
+                More rules: coefficient 1 is hidden (write x, not 1x). Numbers come first (3x, not x3). Variables in alphabetical order (xy, not yx).
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -461,7 +461,7 @@ export const section4TerminologyBlocks: ReactElement[] = [
     <StackLayout key="layout-terms-transition" maxWidth="xl">
         <Block id="terms-transition" padding="sm">
             <EditableParagraph id="para-terms-transition" blockId="terms-transition">
-                Now that you know the vocabulary, let's learn one of the most useful skills in algebra: grouping like terms. This technique lets you simplify complicated expressions into something much easier to work with.
+                Now let's learn to group like terms, one of algebra's most useful skills.
             </EditableParagraph>
         </Block>
     </StackLayout>,

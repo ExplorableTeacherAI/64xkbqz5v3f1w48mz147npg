@@ -119,7 +119,7 @@ export const section1IntroductionBlocks: ReactElement[] = [
     <StackLayout key="layout-intro-hook" maxWidth="xl">
         <Block id="intro-hook" padding="sm">
             <EditableParagraph id="para-intro-hook" blockId="intro-hook">
-                Imagine someone says to you: "I'm thinking of a number. When I add 2 to it, I get 7. What's my number?" You'd probably figure out the answer pretty quickly: the mystery number must be 5, because 5 + 2 = 7. Congratulations, you've just done algebra without even knowing it!
+                "I'm thinking of a number. When I add 2 to it, I get 7. What's my number?" If you guessed 5, you've just done algebra!
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -145,18 +145,17 @@ export const section1IntroductionBlocks: ReactElement[] = [
             <EditableParagraph id="para-intro-definition" blockId="intro-definition">
                 <InlineTooltip
                     id="tooltip-algebra"
-                    tooltip="The word 'algebra' comes from the Arabic word 'al-jabr', meaning 'reunion of broken parts'. It was developed by the mathematician Al-Khwarizmi over 1,200 years ago!"
+                    tooltip="From Arabic 'al-jabr' meaning 'reunion of broken parts'"
                 >
                     Algebra
                 </InlineTooltip>
-                {" "}is a branch of mathematics where we use letters and symbols to represent numbers we don't know yet. Instead of writing a question mark for our mystery number, mathematicians use letters like x, y, or n. These letters are called{" "}
+                {" "}uses letters to represent unknown numbers. We call these letters{" "}
                 <InlineTooltip
                     id="tooltip-variable"
-                    tooltip="A variable is like a container that can hold different values. The letter is just a name for the container!"
+                    tooltip="A container that can hold different values"
                 >
                     variables
-                </InlineTooltip>
-                {" "}because the value they represent can vary depending on the problem.
+                </InlineTooltip>.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -180,7 +179,7 @@ export const section1IntroductionBlocks: ReactElement[] = [
     <StackLayout key="layout-intro-why-text" maxWidth="xl">
         <Block id="intro-why-text" padding="sm">
             <EditableParagraph id="para-intro-why" blockId="intro-why-text">
-                You might wonder: "If I can already solve these puzzles in my head, why do I need algebra?" The truth is, algebra gives us a powerful language for solving problems that are too complex to figure out mentally. Think about it: you could solve "What number plus 2 equals 7?" in your head. But what about "What number, when multiplied by 3 and then added to 17, gives 50?" That's where algebra becomes your superpower. By writing things down with letters and following clear rules, you can solve problems that would make your head spin otherwise.
+                You can solve "What plus 2 equals 7?" in your head. But what about "multiply by 3, then add 17, equals 50"? Algebra gives you a system to solve problems too complex for mental maths.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -197,14 +196,14 @@ export const section1IntroductionBlocks: ReactElement[] = [
     <StackLayout key="layout-intro-difference-text" maxWidth="xl">
         <Block id="intro-difference-text" padding="sm">
             <EditableParagraph id="para-intro-difference" blockId="intro-difference-text">
-                In primary school, you worked mostly with{" "}
+                In{" "}
                 <InlineTooltip
                     id="tooltip-arithmetic"
-                    tooltip="Arithmetic is the branch of maths dealing with basic operations: addition, subtraction, multiplication, and division of known numbers."
+                    tooltip="Adding, subtracting, multiplying and dividing known numbers"
                 >
                     arithmetic
                 </InlineTooltip>
-                : adding, subtracting, multiplying and dividing actual numbers like 5 + 3 = 8 or 12 ÷ 4 = 3. In algebra, we take a step further. Instead of always knowing every number in a problem, we might know that some number plus 3 equals 10, and our job is to find that unknown number. We write this as x + 3 = 10 and then work out that x = 7.
+                , all numbers are known: 5 + 3 = 8. In algebra, we find unknowns: x + 3 = 10, so x = 7.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -221,7 +220,7 @@ export const section1IntroductionBlocks: ReactElement[] = [
     <StackLayout key="layout-intro-formula-explain" maxWidth="xl">
         <Block id="intro-formula-explain" padding="sm">
             <EditableParagraph id="para-intro-formula-explain" blockId="intro-formula-explain">
-                This equation says "some number x, when you add 3 to it, equals 10." The x is standing in for the number we want to find. Once we figure out that x = 7, we've solved the equation!
+                Here x stands for a mystery number. What plus 3 gives 10? The answer: x = 7.
             </EditableParagraph>
         </Block>
     </StackLayout>,
@@ -252,7 +251,7 @@ export const section1IntroductionBlocks: ReactElement[] = [
     <StackLayout key="layout-intro-transition" maxWidth="xl">
         <Block id="intro-transition" padding="sm">
             <EditableParagraph id="para-intro-transition" blockId="intro-transition">
-                Now that you understand the basic idea of algebra, let's practice with some shape puzzles. These puzzles use pictures instead of letters, but the thinking is exactly the same. Once you master shape puzzles, switching to letters will feel natural!
+                Let's practise with shape puzzles next. Same thinking, just with pictures instead of letters!
             </EditableParagraph>
         </Block>
     </StackLayout>,

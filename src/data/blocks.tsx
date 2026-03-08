@@ -30,8 +30,10 @@ import {
     section3BalanceScaleBlocks,
     section4TerminologyBlocks,
     section5LikeTermsBlocks,
+    section5bIndicesBlocks,
     section6SolvingEquationsBlocks,
     section7ReviewBlocks,
+    section8QuizBlocks,
 } from "./sections";
 
 /**
@@ -54,11 +56,17 @@ export const blocks: ReactElement[] = [
     // Section 5: Grouping Like Terms
     ...section5LikeTermsBlocks,
 
+    // Section 5b: Variables with Indices
+    ...section5bIndicesBlocks,
+
     // Section 6: Solving Simple Equations
     ...section6SolvingEquationsBlocks,
 
     // Section 7: Practice and Review
     ...section7ReviewBlocks,
+
+    // Section 8: Checkout Quiz
+    ...section8QuizBlocks,
 ];
 
 export default blocks;
