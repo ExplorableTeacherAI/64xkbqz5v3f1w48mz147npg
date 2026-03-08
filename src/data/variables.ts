@@ -164,7 +164,7 @@ export const variableDefinitions: Record<string, VariableDefinition> = {
         label: 'x Value',
         description: 'The value of x in the balance equation',
         min: 1,
-        max: 10,
+        max: 20,
         step: 1,
         color: '#8b5cf6',
     },
